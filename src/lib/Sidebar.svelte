@@ -1,0 +1,24 @@
+<script>
+	import { pageConfig } from '../config';
+</script>
+
+<aside>
+	<h3>Sayfalar</h3>
+	{#each pageConfig.pages as page}
+		<a href={`/page/${page.route}`}>{page.title}</a>
+	{/each}
+</aside>
+
+<style>
+	aside {
+		position: sticky;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		width: 12rem;
+    flex: 0 0 12rem;
+		background: #fff;
+		border-right: 1px solid #ccc;
+		padding: 3rem 1rem;
+	}
+</style>
