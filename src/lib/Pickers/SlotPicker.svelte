@@ -1,5 +1,5 @@
 <script>
-	import ComponentPicker from '$lib/ComponentPicker.svelte';
+	import ComponentPicker from '$lib/Pickers/ComponentPicker.svelte';
 
 	export let slots;
 	export let name;

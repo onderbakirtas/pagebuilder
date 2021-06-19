@@ -1,6 +1,6 @@
 <script>
-	import Carda from './components/carda.svelte';
-	import Cardb from './components/cardb.svelte';
+	import Carda from '$lib/components/carda.svelte';
+	import Cardb from '$lib/components/cardb.svelte';
 
 	export let element;
 

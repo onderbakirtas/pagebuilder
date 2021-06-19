@@ -1,11 +1,11 @@
 <script>
-	import { pageConfig } from '../config';
+	import { pageConfig } from '../../config';
 </script>
 
 <aside>
 	<h3>Sayfalar</h3>
 	{#each pageConfig.pages as page}
-		<a href={`/page/${page.route}`}>{page.title}</a>
+		<a href={`/admin/${page.route}`}>{page.title}</a>
 	{/each}
 </aside>
 

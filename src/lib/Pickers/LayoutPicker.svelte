@@ -1,7 +1,7 @@
 <script>
-	import LayoutA from './layouts/LayoutA.svelte';
-	import LayoutB from './layouts/LayoutB.svelte';
-	import LayoutC from './layouts/LayoutC.svelte';
+	import LayoutA from '../layouts/LayoutA.svelte';
+	import LayoutB from '../layouts/LayoutB.svelte';
+	import LayoutC from '../layouts/LayoutC.svelte';
 
 	export let layout;
 
