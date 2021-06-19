@@ -29,11 +29,15 @@ const pageConfig = {
 						components: [
 							{
 								name: 'carda',
-								data: {}
+								data: {
+									title: 'Card A ulann!'
+								}
 							},
 							{
 								name: 'cardb',
-								data: {}
+								data: {
+									title: 'Rush B'
+								}
 							}
 						]
 					},

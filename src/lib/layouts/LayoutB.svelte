@@ -1,5 +1,6 @@
 <script>
 	import ComponentPicker from '$lib/ComponentPicker.svelte';
+	import SlotPicker from '$lib/Pickers/SlotPicker.svelte';
 
 	export let slots;
 </script>
@@ -9,13 +10,25 @@
 {JSON.stringify(slots)}
 
 <div class="row">
-	{#each slots as item}
+	<div class="col">
+		<SlotPicker name="slotX" {slots} />
+	</div>
+	<div class="col">
+		<SlotPicker name="slotY" {slots} />
+	</div>
+	<div class="col">
+		<SlotPicker name="slotZ" {slots} />
+	</div>
+	<div class="col">
+		<SlotPicker name="slotT" {slots} />
+	</div>
+	<!-- {#each slots as item}
 		<div class="col">
 			{#each item.components as component}
 				<ComponentPicker element={component} />
 			{/each}
 		</div>
-	{/each}
+	{/each} -->
 </div>
 
 <style>

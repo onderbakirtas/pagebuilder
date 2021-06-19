@@ -11,7 +11,7 @@
 				str = Carda;
 				break;
 			case 'cardb':
-				str = Carda;
+				str = Cardb;
 				break;
 			default:
 				str = Carda;
@@ -20,4 +20,4 @@
 	};
 </script>
 
-<svelte:component this={component(element)} />
+<svelte:component this={component(element)} model={element.data} />
