@@ -1,7 +1,8 @@
 <script>
-	import SlotPicker from '$lib/Pickers/SlotPicker.svelte';
+	import SlotPicker from '$lib/Pickers/SlotPicker.svelte'
 
-	export let slots;
+	export let slots
+	export let pageId
 </script>
 
 <h1>Layout B</h1>
@@ -10,16 +11,16 @@
 
 <div class="row">
 	<div class="col">
-		<SlotPicker name="slotX" {slots} />
+		<SlotPicker name="slotX" {slots} {pageId} />
 	</div>
 	<div class="col">
-		<SlotPicker name="slotY" {slots} />
+		<SlotPicker name="slotY" {slots} {pageId} />
 	</div>
 	<div class="col">
-		<SlotPicker name="slotZ" {slots} />
+		<SlotPicker name="slotZ" {slots} {pageId} />
 	</div>
 	<div class="col">
-		<SlotPicker name="slotT" {slots} />
+		<SlotPicker name="slotT" {slots} {pageId} />
 	</div>
 </div>
 
@@ -33,5 +34,6 @@
 	.col {
 		flex: 0 0 25%;
 		border: 3px solid green;
+		padding: 1rem;
 	}
 </style>

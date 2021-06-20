@@ -1,9 +1,11 @@
 <script>
-	import { page } from '$app/stores';
-	import LayoutPicker from '$lib/Pickers/LayoutPicker.svelte';
-	import { pageConfig } from '../../config';
+	import { page } from '$app/stores'
+	import LayoutPicker from '$lib/Pickers/LayoutPicker.svelte'
+	import { pagesConfig } from '$stores/pages'
 
-	$: layout = pageConfig.pages.find((p) => p.route === $page.params.slug).layout;
+	$: thisPage = $pagesConfig.find((p) => p.route === $page.params.slug)
+
+	console.log(thisPage)
 </script>
 
-<LayoutPicker {layout} />
+<LayoutPicker layout={thisPage.layout} pageId={thisPage.id} />

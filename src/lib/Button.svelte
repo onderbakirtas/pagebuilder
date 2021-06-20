@@ -3,22 +3,29 @@
 	export let block = false;
 </script>
 
-<button class:block>{text}</button>
+<button class:block on:click>{text}</button>
 
 <style>
 	button {
 		display: inline-flex;
 		align-items: center;
-		height: 2.5rem;
-		padding: 0 1rem;
-    border-radius: 0.4rem;
-    border: none;
+		height: 2.25rem;
+		padding: 0 1.5rem;
+		border: none;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
+		font-family: inherit;
+		font-weight: bold;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		background: transparent;
+		color: royalblue;
+		box-shadow: inset 0 0 0 1px royalblue;
 	}
 
 	button:hover {
-		background: rgba(0, 0, 0, 0.1);
+		background: rgba(65, 105, 225, 0.2);
 	}
 
 	button.block {

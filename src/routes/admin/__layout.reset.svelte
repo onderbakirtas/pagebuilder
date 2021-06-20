@@ -10,14 +10,6 @@
 </div>
 
 <style>
-	:global(*) {
-		box-sizing: border-box;
-	}
-
-	:global(body) {
-		margin: 0;
-	}
-
 	.app {
 		display: flex;
 		min-height: 100vh;
