@@ -9,7 +9,7 @@
 
 	$: component = (el) => {
 		let layoutComponent;
-		switch (el.name) {
+		switch (el?.name) {
 			case 'LayoutA':
 				layoutComponent = LayoutA;
 				break;
@@ -26,8 +26,4 @@
 	};
 </script>
 
-{#if layout}
-	<svelte:component this={component(layout)} slots={layout.slots} />
-{:else}
-	<svelte:component this={LayoutError} />
-{/if}
+<svelte:component this={component(layout)} slots={layout?.slots} />
