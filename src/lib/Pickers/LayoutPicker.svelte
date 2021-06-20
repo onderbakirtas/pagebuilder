@@ -1,4 +1,6 @@
 <script>
+	import LayoutError from '$lib/layouts/LayoutError.svelte';
+
 	import LayoutA from '../layouts/LayoutA.svelte';
 	import LayoutB from '../layouts/LayoutB.svelte';
 	import LayoutC from '../layouts/LayoutC.svelte';
@@ -6,23 +8,26 @@
 	export let layout;
 
 	$: component = (el) => {
-		console.log(el);
-		let str;
+		let layoutComponent;
 		switch (el.name) {
 			case 'LayoutA':
-				str = LayoutA;
+				layoutComponent = LayoutA;
 				break;
 			case 'LayoutB':
-				str = LayoutB;
+				layoutComponent = LayoutB;
 				break;
 			case 'LayoutC':
-				str = LayoutC;
+				layoutComponent = LayoutC;
 				break;
 			default:
-				str = LayoutA;
+				layoutComponent = LayoutError;
 		}
-		return str;
+		return layoutComponent;
 	};
 </script>
 
-<svelte:component this={component(layout)} slots={layout.slots} />
+{#if layout}
+	<svelte:component this={component(layout)} slots={layout.slots} />
+{:else}
+	<svelte:component this={LayoutError} />
+{/if}
